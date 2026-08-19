@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Life & Childhood - Seerah Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .amiri { font-family: 'Amiri', serif; }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 shadow-xs">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <div class="flex items-center space-x-4 overflow-x-auto py-1">
+                <a href="index.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Home</a>
+                <a href="miracles.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Miracles</a>
+                <a href="childhood.html" class="font-bold text-amber-600 dark:text-amber-400 whitespace-nowrap text-xs sm:text-sm">Early Life</a>
+                <a href="prophethood.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Prophethood</a>
+                <a href="companions.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Companions</a>
+            </div>
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto px-4 pt-8 pb-6 text-center">
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Early Life & Childhood</h1>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">The blessed beginnings, upbringing, and youth of the final Messenger (PBUH)</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 pb-16">
+        <div id="childhood-container" class="space-y-6">
+            <!-- Dynamic Content -->
+        </div>
+    </main>
+
+    <script>
+        const childhoodPhases = [
+            {
+                id: 1,
+                badge: "Milestone",
+                title: "Birth in the Year of the Elephant",
+                subtitle: "The Sign of Amul Fil",
+                desc: "The Prophet Muhammad (PBUH) was born in Makkah on Monday, 12th of Rabi' al-Awwal in the Year of the Elephant. His father, Abdullah, passed away before his birth, leaving him under the care of his mother Amina and grandfather Abdul Muttalib.",
+                extraDesc: "His birth heralded a profound spiritual awakening for humanity, occurring shortly after Allah protected the Sacred Kaaba from the invading army of Abraha.",
+                image: "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 2,
+                badge: "Upbringing",
+                title: "Upbringing in the Desert with Banu Sa'd",
+                subtitle: "Halimah as-Sa'diyyah and Divine Blessings",
+                desc: "In accordance with the custom of noble Meccan families, he was sent to the desert to be nursed by Halimah as-Sa'diyyah. Her household experienced immense blessings, abundant milk, and flourishing livestock throughout his stay.",
+                extraDesc: "This pure desert upbringing provided him with eloquence in the Arabic language, robust physical health, and protection from the bustling environment of the city.",
+               /* image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"*/
+            },
+            {
+                id: 3,
+                badge: "Purification",
+                title: "The Cleaving of the Chest (Shaqq al-Sadr)",
+                subtitle: "Purification by Angel Jibreel",
+                desc: "During his stay with Banu Sa'd, a miraculous event occurred when Angel Jibreel descended, gently opened his chest, and washed his heart with Zamzam water to remove any trace of worldly impurity.",
+                extraDesc: "This divine purification prepared his heart physically and spiritually for receiving the ultimate revelation of the Quran later in life."
+            },
+            {
+                id: 4,
+                badge: "Trial",
+                title: "Orphanhood and Early Hardships",
+                subtitle: "The Loss of Mother and Grandfather",
+                desc: "At the age of six, while returning from a visit to Madinah with his mother Amina, she fell ill and passed away at Al-Abwa. Shortly after, his loving grandfather Abdul Muttalib passed away.",
+                extraDesc: "Following these trials, his compassionate uncle Abu Talib took him under his protective guardianship, raising him alongside his own children with deep affection."
+            },
+            {
+                id: 5,
+                badge: "Character",
+                title: "Youth and the Title of Al-Amin",
+                subtitle: "The Trustworthy Trader",
+                desc: "Growing into early adulthood, Prophet Muhammad (PBUH) distinguished himself through exceptional character, honesty, and integrity, earning universal respect from the tribes of Quraysh.",
+                extraDesc: "Even before prophethood, the people of Makkah collectively nicknamed him 'Al-Amin' (The Trustworthy), frequently entrusting their most valuable belongings to his care."
+               /* image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"*/
+            }
+        ];
+
+        document.getElementById('childhood-container').innerHTML = childhoodPhases.map(p => `
+            <article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                ${p.image ? `
+                <div class="h-48 sm:h-52 overflow-hidden relative">
+                    <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-amber-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md">
+                        ${p.badge}
+                    </div>
+                </div>
+                ` : ''}
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        ${!p.image ? `<span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">${p.badge}</span>` : ''}
+                        <h2 class="text-xl sm:text-2xl font-bold mt-1">${p.title}</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">${p.subtitle}</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>${p.desc}</p>
+                        <p>${p.extraDesc}</p>
+                    </div>
+                </div>
+            </article>
+        `).join('');
+    </script>
+<footer class="max-w-4xl mx-auto px-4 py-8 mt-12 border-t border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Social Media Links -->
+        <div class="flex items-center space-x-5">
+            <a href="https://t.me/TheHijabiCoder" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                <span>✈️</span> Telegram
+            </a>
+            <a href="https://www.linkedin.com/in/lakin-awel-7a41b0351" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                <span>💼</span> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/1akinua" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                <span>📸</span> Instagram
+            </a>
+        </div>
+
+        <!-- Quick Nav Links -->
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Home</a>
+            <a href="miracles.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Miracles</a>
+            <a href="childhood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Early Life</a>
+            <a href="prophethood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Prophethood</a>
+            <a href="companions.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Companions</a>
+        </div>
+        <!-- Copyright Text -->
+        <p class="flex items-center gap-1.5">
+            © 2026 Seerah Hub. Dedicated to preserving the noble legacy.
+        </p>
+    </div>
+</footer>
+
+    <!-- Link the external script file -->
+    <script src="script.js"></script>
+</body>
+</html>
