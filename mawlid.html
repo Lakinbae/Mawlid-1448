@@ -20,13 +20,16 @@
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
 
     <!-- Navigation Bar -->
-    <nav class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 shadow-xs">
+    <nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 shadow-xs">
         <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
             
             <!-- Brand / Logo Title -->
-            <a href="index.html" class="font-bold text-slate-900 dark:text-white text-base tracking-tight">Seerah Hub</a>
+            <a href="index.html" class="font-bold text-slate-900 dark:text-white text-base tracking-tight flex items-center gap-2">
+               <!-- <span class="bg-indigo-600 text-white w-7 h-7 rounded-lg flex items-center justify-center text-xs"> </span>-->
+                Seerah Hub
+            </a>
 
-            <!-- Desktop Links (Hidden on small screens) -->
+            <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-6">
                 <a href="index.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Home</a>
                 <a href="miracles.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Miracles</a>
@@ -36,16 +39,13 @@
                 <a href="mawlid.html" class="font-bold text-indigo-600 dark:text-indigo-400 text-sm">Mawlid Book</a>
             </div>
 
-            <!-- Right Controls: Theme Toggle & Mobile Menu Button -->
+            <!-- Right Controls -->
             <div class="flex items-center space-x-2">
-                <!-- Theme Toggle Button -->
                 <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shrink-0">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                     </svg>
                 </button>
-
-                <!-- Hamburger Button (Visible on small screens only) -->
                 <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shrink-0">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -54,8 +54,8 @@
             </div>
         </div>
 
-        <!-- Mobile Dropdown Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 border-t border-slate-200 dark:border-slate-800 space-y-2 bg-white dark:bg-slate-900">
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 border-t border-slate-200 dark:border-slate-800 space-y-2 bg-white dark:bg-slate-900 shadow-xl">
             <a href="index.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Home</a>
             <a href="miracles.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Miracles</a>
             <a href="childhood.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Early Life</a>
@@ -66,162 +66,211 @@
     </nav>
 
     <!-- Header Section -->
-    <header class="max-w-4xl mx-auto px-4 pt-10 pb-6 text-center space-y-2">
-        <span class="inline-block bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest border border-indigo-200 dark:border-indigo-900">
-            Featured Amharic Literary Guide
+    <header class="max-w-4xl mx-auto px-4 pt-12 pb-8 text-center space-y-3">
+        <span class="inline-flex items-center gap-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-widest border border-indigo-200/60 dark:border-indigo-900/60 shadow-xs">
+            <span>📖</span> Featured Literary Masterpiece
         </span>
-        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">The Mawlid Book & Insights</h1>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-lg mx-auto">Exploring historical proofs, scholarly depth, and the Ethiopian tradition through the renowned work of <strong>Ambassador Ustaz Hassen Taju</strong>.</p>
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-800 dark:from-white dark:via-indigo-200 dark:to-slate-300 bg-clip-text text-transparent">
+            The Mawlid Book & Insights
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
+            Dive into a soulful exploration of historical proofs, scholarly elegance, and Ethiopia’s rich spiritual heritage crafted by <strong>Ambassador Ustaz Hassen Taju</strong>.
+        </p>
     </header>
 
     <!-- Main Content Container -->
     <main class="max-w-4xl mx-auto px-4 pb-16 space-y-8">
         
         <!-- About the Book & Author Section -->
-        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4">
+        <section class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl pointer-events-none"></div>
             <div class="flex items-center space-x-3">
-                <span class="text-2xl">📚</span>
-                <h2 class="text-xl font-bold text-slate-900 dark:text-white">About the Book & Author</h2>
+                <span class="text-2xl p-2.5 bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 rounded-2xl shadow-xs">📚</span>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">About the Book & Author</h2>
             </div>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                This comprehensive Amharic book on Mawlid is authored by the distinguished and highly respected scholar, diplomat, and public speaker, <strong>Ambassador Ustaz Hassen Taju</strong>. Known for his profound contributions to Islamic knowledge, unity, and heritage preservation in Ethiopia, his work serves as an authoritative bridge connecting deep theological proofs with our local cultural realities.
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                The primary purpose of this book is to provide readers—especially Ethiopian youth and seekers of knowledge—with a clear, balanced, and academically rigorous understanding of why the commemoration of the Prophet's birth matters. It equips readers with historical documentation, answers common misconceptions, and highlights Ethiopia's unique historical relationship with Islam and global heritage preservation efforts.
-            </p>
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                <p>
+                    Written with exceptional grace and deep academic rigor, this masterpiece on Mawlid flows from the pen of the esteemed scholar, diplomat, and beloved public speaker, <strong class="text-indigo-600 dark:text-indigo-400 font-semibold">Ambassador Ustaz Hassen Taju</strong>. His lifelong mission bridges eternal Islamic teachings with the beautiful cultural realities of our communities here in Ethiopia.
+                </p>
+                <p>
+                    Curated especially for inquisitive hearts and youth seeking true clarity, this book opens doors of understanding. It illuminates why honoring the birth of our Master Muhammad ﷺ fills our households with tranquility, answers common questions with gentle wisdom, and celebrates Ethiopia’s extraordinary, historic sanctuary-rooted bond with Islam.
+                </p>
+            </div>
         </section>
 
         <!-- Featured Scholarly Quote Card -->
-        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4">
-            <div class="text-indigo-600 dark:text-indigo-400 text-3xl amiri font-bold">“</div>
-            <p class="text-slate-700 dark:text-slate-300 italic text-base sm:text-lg leading-relaxed -mt-4">
+        <section class="bg-gradient-to-br from-indigo-950 via-slate-900 to-indigo-900 text-white p-7 sm:p-10 rounded-3xl shadow-xl space-y-4 relative overflow-hidden border border-indigo-800/30">
+            <div class="absolute -right-6 -bottom-6 text-white/5 text-9xl amiri font-bold select-none pointer-events-none">حب</div>
+            <div class="text-indigo-400 text-4xl amiri font-bold">“</div>
+            <blockquote class="italic text-lg sm:text-xl leading-relaxed text-indigo-50 font-light -mt-2">
                 "Expressing joy and gratitude over the arrival of the Best of Creation is a tradition rooted in deep love, reflecting our devotion and the timeless duty to remember his noble character and teachings."
-            </p>
-            <p class="text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase">From the Book's Introduction</p>
+            </blockquote>
+            <div class="flex items-center gap-2 pt-2 text-indigo-300 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                <span>Ambassador Ustaz Hassen Taju — From the Introduction</span>
+            </div>
         </section>
 
         <!-- CHAPTER 1: Origins & History -->
-        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4">
-            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Chapter 1</span>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-white">Historical Origins & Development</h2>
+        <section class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-5">
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/60 px-3.5 py-1.5 rounded-full border border-indigo-100 dark:border-indigo-900/50">Chapter 1</span>
+                <span class="text-xs text-slate-400 font-medium">Roots of Remembrance</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Historical Origins & Development</h2>
             
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                The commemoration of the Prophet's birth stands as one of the most widespread expressions of love and historical remembrance in the Muslim world. Tracing its roots back through centuries of Islamic civilization, scholars have long documented how communities naturally gravitated toward honoring the sacred month of Rabi' al-Awwal.
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Far from being a sudden or isolated phenomenon, these gatherings evolved organically as a means to educate new generations about the Seerah. Early historians noted that public assemblies centered around reciting poetry, recounting his miracles, and sharing meals fostered deep communal solidarity.
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Renowned classical scholars across different eras analyzed these practices, recognizing that any gathering that promotes sending salutations upon the Prophet ﷺ, reciting the Quran, and feeding the hungry fulfills core objectives of the Shariah.
-            </p>
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                <p>
+                    The affection for the Prophet Muhammad ﷺ has always burned brightly within the innermost sanctuaries of believer's hearts. Long before formal institutional gatherings became widespread, the pious early generations (<span class="italic text-slate-700 dark:text-slate-200 font-medium">Salaf</span>) nurtured an intimate closeness to his life story, recounting his sublime manners to their children with immense warmth during the blessed month of Rabi' al-Awwal.
+                </p>
+                <p>
+                    As Islamic civilization expanded across centuries, communities naturally yearned to assemble publicly to honor his advent. Historians record that these assemblies blossomed organically into festivals of gratitude—havens where poetic expressions of praise were chanted, his miracles and traits were studied, and feasts were shared generously with the needy, weaving remembrance directly into acts of social kindness.
+                </p>
+                <p>
+                    Prominent classical authorities across generations viewed these gatherings with immense admiration, validating that any assembly dedicated to sending blessings (<span class="italic text-slate-700 dark:text-slate-200 font-medium">Salawat</span>) upon the Prophet ﷺ, reciting divine verses, and feeding humanity fulfills the highest objectives of the Shariah.
+                </p>
+            </div>
         </section>
 
         <!-- CHAPTER 2: Shariah Proofs -->
-        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4">
-            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Chapter 2</span>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-white">Shariah Proofs & Textual Basis</h2>
+        <section class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-5">
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/60 px-3.5 py-1.5 rounded-full border border-indigo-100 dark:border-indigo-900/50">Chapter 2</span>
+                <span class="text-xs text-slate-400 font-medium">Divine Foundations</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Shariah Proofs & Textual Basis</h2>
             
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                When examining the legal framework supporting Mawlid, scholars frequently point to foundational Quranic principles. Allah commands humanity in Surah Yunus: *"Say: 'In the bounty of Allah and in His mercy—therein let them rejoice; that is better than what they accumulate.'"* The Prophet Muhammad ﷺ is described in the Quran as the ultimate mercy to all worlds.
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Furthermore, authentic Hadith records illustrate that the Prophet himself acknowledged and honored his birth. When asked about fasting on Mondays, he explicitly replied: *"That is the day I was born and the day revelation was sent down upon me."* This establishes a direct prophetic precedent for marking the significance of his birth timing.
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Legal analysts emphasize that acts of expression focused on gratitude, remembering divine favors, and uplifting community bonds fall squarely under permissible and commendable actions, provided they remain free from un-Islamic excesses.
-            </p>
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                <p>
+                    When exploring the scriptural permissions sustaining Mawlid, scholars look directly to the radiant verses of the Quran. In Surah Yunus, Allah reminds humanity with deep affection: <span class="italic text-slate-800 dark:text-slate-100">"Say: 'In the bounty of Allah and in His mercy—therein let them rejoice; that is better than what they accumulate.'"</span> Because the Prophet ﷺ is given as the ultimate mercy to all existence, rejoicing in him directly mirrors divine guidance.
+                </p>
+                <p>
+                    Furthermore, authentic prophetic traditions establish a profound personal precedent. When the Prophet ﷺ was asked about his regular custom of fasting on Mondays, he smiled and explained: <span class="italic text-slate-800 dark:text-slate-100">"That is the day I was born and the day revelation was sent down upon me."</span> This offers a clear spiritual anchor for marking the significance of his birth timing through devotion.
+                </p>
+            </div>
         </section>
 
         <!-- QURANIC & HADITH CITE DESIGN -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Quranic Cite Card -->
-            <div class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-6 rounded-xl space-y-3 relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="bg-slate-50/80 dark:bg-slate-950/80 border border-slate-200/80 dark:border-slate-800/80 p-6 rounded-2xl space-y-3 relative overflow-hidden shadow-xs">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-indigo-500"></div>
                 <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Quranic Reference</span>
-                <p class="amiri text-lg text-right text-slate-800 dark:text-slate-200">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ</p>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic">
+                <p class="amiri text-xl text-right text-slate-900 dark:text-slate-100 py-1">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ</p>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic leading-relaxed">
                     "And We have not sent you, [O Muhammad], except as a mercy to the worlds." — (Surah Al-Anbiya: 107)
                 </p>
             </div>
-            <!-- Hadith Cite Card -->
-            <div class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-6 rounded-xl space-y-3 relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-slate-400 dark:bg-slate-600"></div>
+            <div class="bg-slate-50/80 dark:bg-slate-950/80 border border-slate-200/80 dark:border-slate-800/80 p-6 rounded-2xl space-y-3 relative overflow-hidden shadow-xs">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-slate-400 dark:bg-slate-600"></div>
                 <span class="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Prophetic Tradition</span>
-                <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed pt-1">
                     "Fast on Monday... that is the day I was born and the day revelation was sent down upon me."
                 </p>
-                <p class="text-xs text-slate-500 dark:text-slate-400 italic">
-                    — Sahih Muslim
-                </p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 italic">— Sahih Muslim</p>
             </div>
         </section>
 
         <!-- CHAPTER 3: Misconceptions -->
-        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4">
-            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Chapter 3</span>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-white">Clarifying Misconceptions</h2>
+        <section class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-5">
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/60 px-3.5 py-1.5 rounded-full border border-indigo-100 dark:border-indigo-900/50">Chapter 3</span>
+                <span class="text-xs text-slate-400 font-medium">Clearing Doubts</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Clarifying Misconceptions</h2>
             
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Discussions surrounding religious innovations (*Bid'ah*) often generate queries. Traditional jurisprudence categorizes innovations carefully, distinguishing between blameworthy practices that contradict explicit texts and beneficial cultural customs that serve righteous objectives (*Bid'ah Hasanah*).
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Critics sometimes argue that commemorating Mawlid was not practiced during the immediate era of the pious predecessors in the exact modern format. However, scholars respond that compiling the Quran into a single codex and establishing formal schools of thought also developed post-prophetically to serve the expanding Ummah.
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                By addressing these nuances with academic rigor, Ambassador Hassen Taju bridges divergent viewpoints, encouraging mutual respect and focusing attention back on our shared love for the Sunnah and character of the Messenger ﷺ.
-            </p>
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                <p>
+                    It is completely natural for earnest seekers to ask questions about religious traditions. Traditional Islamic jurisprudence approaches innovations (<span class="italic text-slate-700 dark:text-slate-200 font-medium">Bid'ah</span>) with nuanced wisdom, carefully distinguishing between practices that clash with clear text and beneficial cultural customs (<span class="italic text-slate-700 dark:text-slate-200 font-medium">Bid'ah Hasanah</span>) that foster charity, unity, and deep affection for the Messenger of Allah.
+                </p>
+                <p>
+                    Some inquire why the exact modern presentation of Mawlid was not structured during the earliest eras. Scholars lovingly note that compiling the Holy Quran into a unified codex and establishing formal scholarly schools of law also evolved post-prophetically to serve an expanding global Ummah. Through clear academic care, Ambassador Hassen Taju helps readers look past superficial debates and refocus their energy on our shared devotion to the Sunnah.
+                </p>
+            </div>
         </section>
 
         <!-- CHAPTER 4: Spiritual Impact & Unity -->
-        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4">
-            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Chapter 4</span>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-white">Spiritual Impact & Moving Past Endless Debates</h2>
+        <section class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-5">
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/60 px-3.5 py-1.5 rounded-full border border-indigo-100 dark:border-indigo-900/50">Chapter 4</span>
+                <span class="text-xs text-slate-400 font-medium">Peace & Harmony</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Spiritual Impact & Moving Past Endless Debates</h2>
             
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                In reflecting upon these scholarly insights, it becomes evident that engaging in endless, bitter polemics over such a matter is a waste of precious time—time that could instead be dedicated to sending abundant Salawat upon the Prophet ﷺ and engaging in fruitful good deeds.
-            </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                The path of wisdom dictates mutual respect: whoever chooses to celebrate Mawlid can do so with the highest levels of spiritual joy, gratitude, and community service. Conversely, whoever chooses not to participate is entirely free to spend their time with other noble acts of worship, without spending energy criticizing or debating those who celebrate.
-            </p>
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                <p>
+                    When we reflect deeply, engaging in exhausting polemics over matters of devotion drains precious spiritual time—time that could instead be consecrated to sending abundant Salawat upon our Prophet ﷺ and performing righteous acts. 
+                </p>
+                <p>
+                    Wisdom invites us to embrace mutual respect: those who choose to celebrate Mawlid can do so with purified joy, gratitude, and community service. Conversely, those who choose alternate expressions of worship are entirely free to do so in peace, honoring one another without spending energy on bitter arguments.
+                </p>
+            </div>
         </section>
 
         <!-- ETHIOPIAN HERITAGE SECTION -->
-        <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4">
+        <section class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-6">
             <div class="flex items-center space-x-3">
-                <span class="text-2xl">🇪🇹</span>
-                <h2 class="text-xl font-bold text-slate-900 dark:text-white">Mawlid in Ethiopian Society & Culture</h2>
+                <span class="text-2xl p-2.5 bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 rounded-2xl shadow-xs">🇪🇹</span>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Mawlid in Ethiopian Society & Regional Culture</h2>
             </div>
             
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                In Ethiopia, the commemoration of Mawlid holds a uniquely vibrant, historic, and culturally rich place. From urban hubs like Addis Ababa to the historic alleys of Harar, Jimma, Wollo, and regions nationwide, Muslims gather in extraordinary displays of unity, devotion, and collective joy.
+            <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                Across Ethiopia, Mawlid is much more than a date on the calendar—it is a breathtaking national masterpiece of color, spiritual poetry, open-handed hospitality, and communal love. From the bustling avenues of Addis Ababa to the historic stone alleys of Harar, Jimma, and Wollo, the air fills with a magical sense of unity.
             </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                The air fills with soulful local praise poetry known as *Manzuma*, echoing through neighborhoods and community squares. Elders share deep historical accounts of Islam's early ties to Abyssinia, reminding the youth of the historic sanctuary granted by the righteous Ethiopian King Negus Ashama ibn Abjar to the early migrating companions.
+
+            <!-- Cute Regional Highlight Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <!-- Gurage Card -->
+                <div class="bg-slate-50/80 dark:bg-slate-950/80 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 space-y-2 hover:border-indigo-500/50 transition">
+                    <span class="inline-block bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-md">Gurage (Abret)</span>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Marked by profound spiritual gatherings where the chanting of the <em>Barzanji</em> echoes softly alongside deep reflections on noble character.
+                    </p>
+                </div>
+                <!-- Amhara Card -->
+                <div class="bg-slate-50/80 dark:bg-slate-950/80 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 space-y-2 hover:border-indigo-500/50 transition">
+                    <span class="inline-block bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-md">Amhara (Dana, Anna)</span>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Serves as major community milestones that unite local scholars, youth, and eager students of knowledge in warm fellowship.
+                    </p>
+                </div>
+                <!-- Oromia Card -->
+                <div class="bg-slate-50/80 dark:bg-slate-950/80 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 space-y-2 hover:border-indigo-500/50 transition">
+                    <span class="inline-block bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-md">Oromia (Challe)</span>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Famous for soulful Menzuma recitations that historically taught rural communities the entire Seerah through oral poetry and rhythm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed pt-2">
+                <p>
+                    Through the enduring guidance of devoted local Sheikhs, these regional traditions transformed towns into bright hubs of education. Someone arriving with simple questions would leave humming a rhythmic Menzuma that taught them about the Prophet's endless patience, statecraft, diplomacy, and tenderness.
+                </p>
+                <p>
+                    Streets transform into feasts of generosity where traditional dishes are cooked in large quantities, shared freely among neighbors of all backgrounds, and handed out to those in need. It stands as an eternal testament to how beautifully faith and Ethiopian culture walk hand in hand.
+                </p>
+            </div>
+        </section>
+
+        <!-- Dedicated Closing Section -->
+        <section class="bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-200/60 dark:border-indigo-900/60 p-7 sm:p-10 rounded-3xl shadow-xs space-y-5 text-center">
+            <h3 class="text-xl font-bold text-indigo-950 dark:text-indigo-200">A Timeless Legacy of Love</h3>
+            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+                Expressing love, joy, and profound happiness for the coming of our beloved Prophet ﷺ is a magnificent calling that believers fulfill in wonderfully diverse ways. Some manifest this devotion through fasting, while others express it by feeding the hungry and spreading charity. Many choose to celebrate through public gatherings of Mawlid, while others mirror the matchless loyalty of the noble companions—who proved their love by standing as a living shield to protect him ﷺ, and whose deep devotion was even reflected in intimate accounts of loyalty and sacrifice.
             </p>
-            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Streets transform into scenes of open-handed hospitality where traditional feasts are prepared, shared freely among neighbors regardless of background, and distributed to those in need. It stands as a magnificent testament to how deeply faith, peace, and national heritage intertwine in Ethiopian society.
+            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+                Ultimately, Mawlid is not something to be debated or argued over, but rather a season to be deeply loved and cherished. Let us continue this glowing legacy of affection, keeping the light of the Messenger's Seerah alive in our hearts until the arrival of Yawmal Kiyama, Insha'Allah.
             </p>
         </section>
 
-        <!-- Dedicated Closing Section (Expanded, Certain, & Loving - 2 Paragraphs) -->
-        <section class="bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-200/60 dark:border-indigo-900/60 p-6 sm:p-8 rounded-2xl shadow-xs space-y-4 text-center">
-            <h3 class="text-lg font-bold text-indigo-900 dark:text-indigo-200">A Timeless Legacy of Love</h3>
-            <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-                No matter the passing of time, the debates of critics, or attempts at labeling, Mawlid will forever remain a sacred beacon of pure love, glowing brightly in the hearts of believers until the arrival of Yawmal Kiyama. It is an enduring tradition fed by sincere devotion, echoing through generations as millions gather with joyful tears and grateful hearts to remember the most beloved of creation ﷺ.
-            </p>
-            <p class="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-                Take comfort in the absolute certainty of this divine connection: because Allah endlessly loves His noble Messenger, and because we hold that same profound, unshakeable love deep within our souls, Allah Himself will always shield and protect this blessed legacy from any harm. Its radiant light will never be extinguished, Insha'Allah.
-            </p>
-        </section>
-
-        <!-- Download CTA Card (Cool Indigo Theme) -->
-        <section class="bg-slate-900 text-white p-8 rounded-2xl shadow-md text-center space-y-4 border border-slate-800">
-            <h2 class="text-xl font-bold">Download the Complete Amharic Book</h2>
-            <p class="text-slate-400 text-sm sm:text-base max-w-lg mx-auto">
+        <!-- Download CTA Card -->
+        <section class="bg-slate-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl text-center space-y-4 border border-slate-800 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-48 h-48 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            <h2 class="text-2xl font-bold">Download the Complete Amharic Book</h2>
+            <p class="text-slate-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
                 Read Ambassador Hassen Taju's complete Amharic treatise on Mawlid offline by downloading the full PDF file below.
             </p>
-            <!-- IMPORTANT: Replace the href below with your direct Google Drive download link -->
-            <a href="YOUR_GOOGLE_DRIVE_DOWNLOAD_LINK_HERE" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl shadow-sm transition text-sm sm:text-base">
+            <a href="YOUR_GOOGLE_DRIVE_DOWNLOAD_LINK_HERE" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3.5 rounded-2xl shadow-md transition text-sm sm:text-base">
                 📥 Download Full Amharic Book (PDF)
             </a>
         </section>
@@ -231,8 +280,6 @@
     <!-- Footer Section -->
     <footer class="max-w-4xl mx-auto px-4 py-8 mt-12 border-t border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-            
-            <!-- Social Media Links -->
             <div class="flex items-center space-x-5">
                 <a href="https://t.me/TheHijabiCoder" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition font-medium">
                     <span>✈️</span> Telegram
@@ -245,7 +292,6 @@
                 </a>
             </div>
 
-            <!-- Quick Nav Links -->
             <div class="flex items-center space-x-4">
                 <a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Home</a>
                 <a href="miracles.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Miracles</a>
@@ -254,16 +300,14 @@
                 <a href="companions.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Companions</a>
             </div>
 
-            <!-- Copyright Text -->
             <p class="flex items-center gap-1.5">
                 © 2026 Seerah Hub. Dedicated to preserving the noble legacy.
             </p>
         </div>
     </footer>
 
-    <!-- Scripts for Theme Toggle & Mobile Hamburger Menu -->
+    <!-- Scripts -->
     <script>
-        // Theme Toggle Script
         const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
 
@@ -282,7 +326,6 @@
             }
         });
 
-        // Mobile Menu Toggle Script
         const menuToggleBtn = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
 

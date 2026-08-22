@@ -79,11 +79,11 @@
 
     <!-- Main Content Container -->
     <main class="max-w-4xl mx-auto px-4 pb-16 space-y-8">
-                <!-- Countdown Banner -->
+        <!-- Countdown Banner -->
         <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm text-center space-y-4">
             <div>
                 <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Countdown to Mawlid al-Nabi</h2>
-                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Waiting in joyful anticipation for the blessed 12th of Rabia al-Awwal</p>
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Waiting in joyful anticipation for the blessed 12th of Rabia al-Awwal (August 25)</p>
             </div>
             <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto">
                 <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-3">
@@ -157,42 +157,41 @@
         </section>
 
     </main>
+
     <!-- Footer Section -->
-<!-- Footer Section -->
-<!-- Footer Section -->
-<footer class="max-w-4xl mx-auto px-4 py-8 mt-12 border-t border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        
-        <!-- Social Media Links -->
-        <div class="flex items-center space-x-5">
-            <a href="https://t.me/TheHijabiCoder" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
-                <span>✈️</span> Telegram
-            </a>
-            <a href="https://www.linkedin.com/in/lakin-awel-7a41b0351" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
-                <span>💼</span> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/1akinua" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
-                <span>📸</span> Instagram
-            </a>
-        </div>
+    <footer class="max-w-4xl mx-auto px-4 py-8 mt-12 border-t border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <!-- Social Media Links -->
+            <div class="flex items-center space-x-5">
+                <a href="https://t.me/TheHijabiCoder" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                    <span>✈️</span> Telegram
+                </a>
+                <a href="https://www.linkedin.com/in/lakin-awel-7a41b0351" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/1akinua" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                    <span>📸</span> Instagram
+                </a>
+            </div>
 
-        <!-- Quick Nav Links -->
-        <div class="flex items-center space-x-4">
-            <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Home</a>
-            <a href="miracles.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Miracles</a>
-            <a href="childhood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Early Life</a>
-            <a href="prophethood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Prophethood</a>
-            <a href="companions.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Companions</a>
+            <!-- Quick Nav Links -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Home</a>
+                <a href="miracles.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Miracles</a>
+                <a href="childhood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Early Life</a>
+                <a href="prophethood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Prophethood</a>
+                <a href="companions.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Companions</a>
+            </div>
+            
+            <!-- Copyright Text -->
+            <p class="flex items-center gap-1.5">
+                © 2026 Seerah Hub. Dedicated to preserving the noble legacy.
+            </p>
         </div>
-        <!-- Copyright Text -->
-        <p class="flex items-center gap-1.5">
-            © 2026 Seerah Hub. Dedicated to preserving the noble legacy.
-        </p>
-    </div>
-</footer>
+    </footer>
 
-<!-- Scripts for Theme Toggle & Mobile Hamburger Menu -->
+    <!-- Scripts for Theme Toggle, Mobile Hamburger Menu, and Countdown Timer -->
     <script>
         // Theme Toggle Script
         const themeToggleBtn = document.getElementById('theme-toggle');
@@ -220,6 +219,35 @@
         menuToggleBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Countdown Timer Script for August 25, 2026
+        const targetDate = new Date("August 25, 2026 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
 </html>
