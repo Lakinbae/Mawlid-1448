@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Miracles of the Prophet (PBUH)</title>
+    <title>Miracles of the Prophet (PBUH)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,25 +19,51 @@
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
 
-    <!-- Navigation Bar -->
+<!-- Navigation Bar -->
     <nav class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 shadow-xs">
         <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-            <div class="flex items-center space-x-4 overflow-x-auto py-1">
-                <a href="index.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Home</a>
-                <a href="miracles.html" class="font-bold text-amber-600 dark:text-amber-400 whitespace-nowrap text-xs sm:text-sm">Miracles</a>
-                <a href="childhood.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Early Life</a>
-                <a href="prophethood.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Prophethood</a>
-                <a href="companions.html" class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 whitespace-nowrap">Companions</a>
+            
+            <!-- Brand / Logo Title -->
+            <a href="index.html" class="font-bold text-slate-900 dark:text-white text-base tracking-tight">Seerah Hub</a>
+
+            <!-- Desktop Links (Hidden on small screens) -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Home</a>
+                <a href="miracles.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Miracles</a>
+                <a href="childhood.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Early Life</a>
+                <a href="prophethood.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Prophethood</a>
+                <a href="companions.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Companions</a>
+                <a href="mawlid.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Mawlid Insights</a>
             </div>
-            <!-- Theme Toggle Button -->
-            <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shrink-0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                </svg>
-            </button>
+
+            <!-- Right Controls: Theme Toggle & Mobile Menu Button -->
+            <div class="flex items-center space-x-2">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+
+                <!-- Hamburger Button (Visible on small screens only) -->
+                <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 border-t border-slate-200 dark:border-slate-800 space-y-2 bg-white dark:bg-slate-900">
+            <a href="index.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Home</a>
+            <a href="miracles.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Miracles</a>
+            <a href="childhood.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Early Life</a>
+            <a href="prophethood.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Prophethood</a>
+            <a href="companions.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Companions</a>
+            <a href="mawlid.html" class="block py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Mawlid Insights</a>
         </div>
     </nav>
-
     <!-- Header Section -->
     <header class="max-w-4xl mx-auto px-4 pt-10 pb-6 text-center space-y-2">
         <span class="inline-block bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest">
@@ -49,46 +75,645 @@
 
     <!-- Main Content Container -->
     <main class="max-w-4xl mx-auto px-4 pb-16 space-y-8">
-        
-
-        <!-- Miracles Container (Populated dynamically by script.js) -->
         <div id="miracles-container" class="space-y-6">
-            <!-- JavaScript will insert the 30 miracle cards here -->
+
+            <!-- 1. The Holy Quran -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="h-48 sm:h-52 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80" alt="The Holy Quran" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Eternal Miracle</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Ultimate Living Miracle: The Holy Quran</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">An eternal, unalterable light guiding humanity across the ages.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>While physical miracles occurred during the blessed lifetime of the Prophet (pbuh) and concluded with his passing, the Holy Quran stands as his greatest, everlasting, and living miracle. Challenging the literary masters of Arabia to produce even a single chapter like it, it remains entirely unmatched in its profound eloquence, structural perfection, and spiritual depth.</p>
+                        <p>It continues to transform millions of hearts worldwide, offering timeless guidance, healing, and absolute clarity. Protected directly by the Creator without a single letter altered since its revelation, it is a miracle witnessed and experienced by every generation.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّ لَهُ لَحَافِظُونَ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Al-Hijr 15:9</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. Splitting of the Moon -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Cosmic Sign</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Splitting of the Celestial Moon</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">A breathtaking cosmic sign witnessed in the skies of Mecca.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>When the disbelievers of Quraysh demanded an unmistakable, tangible sign to verify his prophetic mission, the Prophet Muhammad (pbuh) raised his index finger toward the night sky. By the absolute power and command of Allah, the moon split perfectly into two distinct, visible halves, hovering over the mountains of Mecca.</p>
+                        <p>Travelers coming from distant trade routes outside the city later confirmed seeing the exact same split in the heavens, making it a globally witnessed public miracle that left skeptics stunned yet stubbornly resistant.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">اقْتَرَبَتِ السَّاعَةُ وَانْشَقَّ الْقَمَرُ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"The Hour has drawn near, and the moon has split [in two]."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Al-Qamar 54:1</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. Night Journey & Ascension -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Divine Journey</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Night Journey & Ascension (Isra and Mi'raj)</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Crossing bounds from Al-Aqsa to the highest heavens.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>In one miraculous, transcendent night, the Prophet (pbuh) was transported across space from the Sacred Mosque in Mecca to the Al-Aqsa Mosque in Jerusalem riding the heavenly mount Buraq, accompanied by Angel Jibreel, where he led all previous prophets in prayer.</p>
+                        <p>From Jerusalem, he ascended through the seven majestic heavens, witnessing profound spiritual realms, meeting past prophets, and reaching Sidrat al-Muntaha—the furthest lotus tree—where the obligation of the five daily prayers was gifted directly to the Ummah.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">سُبْحَانَ الَّذِي أَسْرَى بِعَبْدِهِ لَيْلاً</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Exalted is He who took His Servant by night from the Sacred Mosque to the farthest mosque..."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Al-Isra 17:1</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. Water Flowing from Fingers -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Abundant Blessing</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Water Flowing from His Blessed Fingers</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Quenching an entire army from a small vessel.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>During the tense expedition of Hudaybiyyah, the companions ran desperately low on water in the scorching desert heat, having only a tiny vessel left for the Prophet's minor ablution (Wudhu) with no other source in sight.</p>
+                        <p>The Prophet (pbuh) placed his blessed hand directly inside the vessel. Instantly, crystal-clear water began gushing forth like bubbling springs from between his fingers, allowing over 1,500 companions to drink deeply, perform Wudhu, and fill every water skin they carried.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"A mercy from your Lord, providing sustenance and divine comfort when all worldly means fail."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. Weeping Palm Tree -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Living Love</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Weeping Palm Tree (Jadh'u al-Hannanah)</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Inanimate creation crying out in deep love and longing.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>For years, the Prophet (pbuh) delivered Friday sermons while leaning against the rough trunk of a date palm tree in his simple mosque. When a proper wooden pulpit (Minbar) was finally built for him, he stepped onto it and left the old trunk behind.</p>
+                        <p>During that very first sermon on the new pulpit, a sound like a grieving mother camel echoed through the entire mosque—the dry trunk itself was weeping out of physical longing and sorrow for missing his close presence. The Prophet stepped down, walked over, and embraced it until its crying quieted.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَإِن مِّن شَيْءٍ إِلَّا يُسَبِّحُ بِحَمْدِهِ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And there is not a thing except that it exalts [Allah] by His praise, but you do not understand their glorifying."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. Cave Thawr -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Invisible Shield</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Divine Shield in Cave Thawr</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Invisible armies and delicate webs stopping a massive manhunt.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Hunted by fierce trackers during the perilous migration of Hijrah, the Prophet (pbuh) and Abu Bakr (RA) took refuge inside the dark chambers of Cave Thawr. The relentless Quraysh search party arrived directly at the mouth of the cave, standing just feet away.</p>
+                        <p>Allah commanded a spider to swiftly spin an unbroken web across the narrow entrance and a wild pigeon to nest peacefully with delicate eggs. Seeing these undisturbed natural signs, the trackers concluded no human could have entered recently, keeping them safe effortlessly.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">إِلَّا تَنْصُرُوهُ فَقَدْ نَصَرَهُ اللَّهُ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"If you do not aid the Prophet - Allah has already aided him when those who disbelieved had driven him out."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah At-Tawbah 9:40</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7. Multiplication of Little Food -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Miraculous Provision</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Multiplication of Little Food</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Feeding crowds from a single household meal.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>On multiple historical occasions—such as during the grueling Battle of the Trench and Jabir's humble house feast—scarce rations of food that could barely sustain a single person were brought before the Prophet (pbuh).</p>
+                        <p>With his blessing and prayer, hundreds of hungry companions ate to their absolute fullness, yet the pots and bowls looked completely untouched and full, showcasing an extraordinary display of divine barakah.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَاللَّهُ يَرْزُقُ مَنْ يَشَاءُ بِغَيْرِ حِسَابٍ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And Allah provides for whom He wills without account."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih Muslim</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8. Healing of Ali's Eyes -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Divine Healing</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Healing of Ali's Eyes at Khaybar</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Restoring acute vision through prophetic touch and saliva.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>During the critical campaign of Khaybar, Ali ibn Abi Talib (RA) was suffering from an agonizing and severe eye infection, leaving his eyes swollen shut and rendering him unable to join the frontline defense.</p>
+                        <p>The Prophet (pbuh) called for him, gently applied his blessed saliva to Ali's eyes, and invoked a prayer for his recovery. Ali was healed instantly, stepping forward with full vision as though he had never experienced a moment of pain.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And We send down of the Qur'an that which is healing and mercy for the believers."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 9. The Complaining Camel -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Created Empathy</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Complaining Camel</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Creation recognizing injustice and seeking justice from the Messenger.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>While passing through an orchard, a working camel caught sight of the Prophet (pbuh), broke into a run across the field, and knelt down submissively before him while groaning softly with tears flowing from its eyes.</p>
+                        <p>When questioned, the owners admitted the animal had worked exhaustively to the point of collapse and they intended to slaughter it. The Prophet reprimanded them gently, reminding humanity that animals hold sacred rights and emotional depth.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَمَا مِنْ دَابَّةٍ فِي الْأَرْضِ إِلَّا عَلَى اللَّهِ رِزْقُهَا</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And there is no creature on earth except that its provision is due upon Allah."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Musnad Ahmad</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 10. Submission of the Wolf -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Wildlife Testimony</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Submission of the Wolf</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Wild nature testifying to the truth of final prophethood.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>A wild wolf snatched a sheep from a terrified shepherd, who immediately chased it down across the pasture to rescue his flock. To the absolute shock of the shepherd, the wolf sat back on its haunches and spoke in clear, eloquent human language.</p>
+                        <p>The wolf told the astonished shepherd about the arrival of the final Prophet in Medina, telling him that humanity was ignoring monumental signs, serving as an extraordinary encounter from the wilds of nature.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">سَنُرِيهِمْ آيَاتِنَا فِي الْآفَاقِ وَفِي أَنْفُسِهِمْ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"We will show them Our signs in the horizons and within themselves until it becomes clear."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sunan an-Nasa'i</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 11. Stones Glorifying Allah -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Sublime Praise</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Stones Glorifying Allah in His Hand</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Inanimate pebbles praising the Creator audibly.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Companion Abu Dharr (RA) reported that once when he sat in quiet companionship with the Prophet (pbuh), a handful of ordinary pebbles placed directly in his open palm began to audibly buzz and glorify Allah.</p>
+                        <p>The sound was clear, resembling the collective humming of a swarm of bees. The pebbles were then passed to the hands of Abu Bakr and Umar, where they continued their praise, offering a glimpse into the spiritual aura surrounding him.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">تُسَبِّحُ لَهُ السَّمَاوَاتُ السَّبْعُ وَالْأَرْضُ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"The seven heavens and the earth and whatever is in them exalt Him."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Al-Mu'jam al-Awsat</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 12. Healing of Qatadah's Eye -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Miraculous Recovery</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Healing of Qatadah's Eye</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">An injured eye restored better and sharper than before.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>During the intense chaos of the Battle of Uhud, Companion Qatadah suffered a horrific wound when a flying arrow struck him directly in the face, causing his eyeball to pop completely out of its socket onto his cheek.</p>
+                        <p>The Prophet calmly took the eye in his hand, pressed it back gently into its proper place, and prayed over it. It healed so completely and perfectly that Qatadah could see clearer and sharper with it than his healthy eye for the rest of his life.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَهُوَ الَّذِي يُنْزِلُ الْغَيْثَ مِنْ بَعْدِ مَا قَنَطُوا</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And it is He who sends down the rain after they had despaired and scatters His mercy."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Al-Bayhaqi</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 13. Suraqa's Horse -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Divine Trap</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Miracle of Suraqa's Horse</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Hooves sinking deep into solid stone as divine protection.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>When the bounty hunter Suraqa bin Malik chased the fleeing Prophet (pbuh) across the desert during the Hijrah, he drew dangerously close, high on the promise of a massive reward offered by the Quraysh.</p>
+                        <p>Sensing danger, the Prophet uttered a brief, calm prayer. Instantly, Suraqa's charging horse sank its hooves deep into solid, unyielding rock as though it were soft mud, trapping him immovably until he begged for safety and was granted amnesty.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">فَأَنْزَلَ اللَّهُ سَكِينَتَهُ عَلَيْهِ وَأَيَّدَهُ بِجُنُودٍ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And Allah sent down his tranquility upon him and supported him with angels you did not see."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 14. Poisoned Mutton -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Food Warning</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Mutton That Spoke a Warning</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Poisoned meat revealing its deadly secret before ingestion.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Following the victory at Khaybar, a hostile local woman presented the Prophet (pbuh) with a roasted sheep as a gift, secretly lacing his favorite cuts with a lethal, fast-acting poison.</p>
+                        <p>As the Prophet took a small bite into the meat, the piece of mutton miraculously spoke out loud, warning him: 'Do not eat me, for I am poisoned!' protecting his life from hidden treachery through divine intervention.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَاللَّهُ يَعْصِمُكَ مِنَ النَّاسِ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And Allah will protect you from the people."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 15. Prostration of the Trees -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Nature's Bow</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Prostration of the Trees</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Nature bowing in unison to testify to his message.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>In authentic accounts narrated by trusted companions, trees on multiple occasions uprooted themselves from the earth, traveled across the landscape, and bowed down in front of the Prophet (pbuh) out of deep reverence.</p>
+                        <p>After testifying to his message, they returned to their places. These majestic occurrences served as unmistakable proofs to onlookers that all creations recognize their true Creator and His chosen Messenger.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">أَلَمْ تَرَ أَنَّ اللَّهَ يَسْجُدُ لَهُ مَنْ فِي السَّمَاوَاتِ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Do you not see that to Allah prostrates whoever is in the heavens and earth and sun and moon..."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sunan al-Darimi</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 16. Valley of Milk and Honey -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Desert Sustenance</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Valley Flowing with Milk and Honey</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Miraculous provisions during times of extreme hardship.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>During arduous military expeditions when worldly supplies ran completely dry and hunger weighed heavy on the believers' shoulders, streams of pure milk and sweet honey materialized by divine decree right where they camped.</p>
+                        <p>These temporary, extraordinary manifestations of sustenance heartened the exhausted travelers and proved beyond doubt that true provision lies entirely in the hands of the Provider.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَمَنْ يَتَّقِ اللَّهَ يَجْعَلْ لَهُ مَخْرَجًا</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And whoever fears Allah - He will make for him a way out and provide for him from where he does not expect."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Dala'il al-Nubuwwah</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 17. Shade of the Moving Cloud -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Celestial Canopy</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Shade of the Moving Cloud</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">A personal canopy shielding him across desert travels.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>During his youth while traveling on a merchant trade caravan toward Syria, the Christian monk Bahira observed a miraculous, low-hanging cloud hovering exclusively over young Muhammad amidst the open desert.</p>
+                        <p>The cloud moved precisely when he moved and stayed completely stationary when he rested, shielding him perfectly from the blistering desert sun and offering an early sign of his blessed status.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَأَظَلَلْنَا عَلَيْكُمُ الْغَمَامَ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And We shaded you with clouds and sent down upon you manna and quails."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Al-Tirmidhi</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 18. The Speaking Arm Bone -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Exposed Treachery</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Speaking Arm Bone</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">A cooked animal limb revealing hidden treachery.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Similar to the speaking mutton at Khaybar, a cooked sheep shoulder served to the Prophet (pbuh) at another gathering warned him directly of hidden toxins mixed into the dish.</p>
+                        <p>The roasted bone spoke with crisp, unmistakable clarity, verifying that foul play was afoot and showcasing how Allah guarded His messenger from every covert plot.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">عَالِمُ الْغَيْبِ فَلَا يُظْهِرُ عَلَى غَيْبِهِ أَحَدًا</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"[He is] Knower of the unseen, and He does not reveal His unseen to anyone."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Musnad Ahmad</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 19. Accurate Description of Jerusalem -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Visions Realized</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Accurate Description of Jerusalem</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Detailed architectural testimony without prior travel.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>When the Prophet narrated his miraculous night journey to Jerusalem to the disbelievers of Mecca, they attempted to mock and cross-examine him by quizzing him on every single pillar, gate, and corner of the remote sanctuary.</p>
+                        <p>Allah brought the vision of Jerusalem vividly before his physical eyes in real-time, allowing him to answer every tricky architectural detail with absolute precision and leave the interrogators speechless.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">فَسُبْحَانَ الَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"So exalted is He in whose hand is the realm of all things, and to Him you will be returned."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 20. Multiplying Dates of Abu Hurairah -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Endless Barakah</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Multiplying Dates of Abu Hurairah</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">A single bag feeding a household for years.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Companion Abu Hurairah once brought a small, meager pouch of dates to the Prophet, who blessed the pouch and instructed him to always reach inside to take what he needed without ever emptying or shaking it out.</p>
+                        <p>Abu Hurairah ate from that exact bag and generously fed others throughout multiple historical eras—surviving through political upheavals and consuming sacks worth of dates from a single small pouch.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَكَأَيِّنْ مِنْ دَابَّةٍ لَا تَحْمِلُ رِزْقَهَا</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And how many a creature carries not its provision? Allah provides for it and for you."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Jami' at-Tirmidhi</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 21. Prophecy of Rome's Defeat -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Prophetic Foresight</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Prophecy of Rome's Defeat</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Accurate geopolitics foretold during intense persecution.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>When the Byzantine Empire suffered devastating military losses against the Persians, local disbelievers mocked the Muslims, claiming idolatry was winning globally. Surah Ar-Rum then boldly prophesied that Byzantines would triumph back within a few years.</p>
+                        <p>Exactly as foretold down to the predicted window, the tide turned dramatically on the geopolitical stage, confirming beyond doubt the divine origin of the Quran's predictive verses.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">غُلِبَتِ الرُّومُ فِي أَدْنَى الْأَرْضِ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"The Byzantines have been defeated in the nearest land, but they will overcome after their defeat."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Ar-Rum 30:1-3</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 22. Jabir's Camel -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Surging Speed</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Miracle of Jabir's Camel</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">An exhausted animal transformed into an unstoppable runner.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>During a long desert journey, Jabir's riding camel became so exhausted, starved, and weak that it lagged far behind the rest of the moving caravan, unable to keep pace.</p>
+                        <p>The Prophet noticed, walked back, tapped the animal gently, and offered a prayer. Instantly, the camel surged forward with explosive, tireless speed, outpacing every other mount in the caravan for the remainder of the trip.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And He is over all things competent."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 23. Umm Ma'bad's Ewe -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Desert Abundance</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Safe Haven of Umm Ma'bad's Ewe</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">A dry, barren goat yielding floods of milk.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>During the tense days of the Hijrah, the exhausted travelers stopped to rest at the remote tent of Umm Ma'bad. She owned an emaciated, elderly ewe that produced zero milk due to severe regional drought.</p>
+                        <p>The Prophet gently wiped the ewe's dry udder and prayed. Immediately, milk poured forth in rich, heavy streams, satisfying every traveler present and leaving a generous surplus for the household.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">فَانْظُرْ إِلَى آثَارِ رَحْمَتِ اللَّهِ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Then look at the effects of the mercy of Allah - how He revives the earth after its death."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Al-Hakim</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 24. Night Watch of the Angels -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Heavenly Guards</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Night Watch of the Angels</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Heavenly guards securing his resting tent.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Before verses assuring his absolute safety and divine protection were officially revealed, the Prophet spent anxious nights awake guarding his camp against potential midnight assassinations.</p>
+                        <p>Upon receiving heavenly reassurance, ranks of glorious angels descended from the skies to secure his perimeter so he could rest securely without human sentries.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَاللَّهُ يَعْصِمُكَ مِنَ النَّاسِ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And Allah will protect you from the people. Indeed, Allah does not guide the disbelievers."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Jami' at-Tirmidhi</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 25. Peaceful Slumber Protection -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Tranquil Rest</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Peaceful Slumber Protection</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Guarded through deep sleep without human sentries.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Throughout his mission across hostile and unpredictable tribal environments, the Prophet rested soundly, knowing divine decree watched over his sleep.</p>
+                        <p>His slumber was deeply tranquil, anchored in absolute trust in his Lord's promise of safety until his mission on earth was completely accomplished.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">إِذْ يُغَشِّيكُمُ النُّعَاسَ أَمَنَةً مِنْهُ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"[Remember] when He overwhelmed you with drowsiness as security from Him."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih Muslim</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 26. Conversion of the Jinn -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Unseen Audience</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Conversion of the Jinn</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Unseen beings listening attentively to Quran recitation.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>While reciting verses of the Quran during quiet night prayers in the valley of Nakhla, a delegation of unseen Jinn listened intently, embraced Islam in their hearts, and rushed back to warn their communities.</p>
+                        <p>This profound, otherworldly event was later revealed to humanity in Surah Al-Jinn, marking a universal message meant for both mankind and the unseen realms.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Say, 'It has been revealed to me that a group of the jinn listened and said, \"We have heard an amazing Qur'an.\" '"</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Al-Jinn 72:1</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 27. Wells of Hudaybiyyah Refilled -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Water Spring</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Wells of Hudaybiyyah Refilled</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Arrows restoring dried-up water sources.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>At Hudaybiyyah, an old, abandoned dry well was quickly depleted to the last drop by thirsty companions under the hot sun. A simple arrow was placed inside the muddy basin by prophetic instruction.</p>
+                        <p>Water immediately bubbled up with such overwhelming abundance that it quenched the entire camp of 1,500 people and provided secure water reserves for days.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">فَمَنْ يَأْتِيكُمْ بِمَاعٍ مَعِينٍ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Say, 'If your water was to become sunken, then who could bring you flowing water?'"</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Sahih al-Bukhari</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 28. Universal Compassion and Mercy -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Universal Mercy</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Universal Compassion and Mercy</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Children and nature finding peace in his presence.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>Children felt immediate, natural peace, safety, and comfort in the gentle presence of the Prophet (pbuh), often stopping their crying instantly when he held or smiled at them.</p>
+                        <p>His immense mercy extended to all living things, creating an aura of supreme serenity that both human hearts and nature instinctively recognized.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"And We have not sent you except as a mercy to the worlds."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Al-Anbiya 21:107</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 29. Victory at Badr -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Divine Victory</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Victory at Badr against Odds</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Angelic reinforcements securing a historic turning point.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>At Badr, an outnumbered force of 313 ill-equipped Muslims faced over 1,000 elite, heavily armed Quraysh fighters. The Prophet spent the entire night before battle in deep, tearful earnest prayer.</p>
+                        <p>Allah answered by sending down disciplined ranks of angels to reinforce the believers, resulting in a decisive, history-shifting victory against all worldly odds.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">أَنِّي مُمِدُّكُمْ بِأَلْفٍ مِنَ الْمَلَائِكَةِ</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Indeed, I will reinforce you with a thousand from the angels, rank on rank."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Al-Anfal 8:9</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 30. Unconquerable Khaybar Fortresses -->
+            <article class="miracle-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+                <div class="p-6 sm:p-8 space-y-4">
+                    <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full mb-2">Swift Conquest</span>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">The Unconquerable Khaybar Fortresses</h2>
+                        <p class="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400 mt-1">Swift triumphs granted through divine decree.</p>
+                    </div>
+                    <div class="space-y-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>The massive fortresses of Khaybar were historically considered completely impenetrable, heavily protected by deep defensive trenches, massive stone walls, and elite garrisons.</p>
+                        <p>Through steadfast faith and sudden divine assistance, these seemingly impossible obstacles were overcome in days, securing safety and stability for the growing Muslim community.</p>
+                    </div>
+                    <div class="bg-amber-50/50 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/80 rounded-xl p-4 sm:p-5 space-y-2">
+                        <p class="amiri text-lg sm:text-xl text-center text-amber-900 dark:text-amber-200 font-bold">وَعَدَكُمُ اللَّهُ مَغَانِمَ كَثِيرَةً</p>
+                        <p class="text-xs text-center italic text-slate-500 dark:text-slate-400">"Allah has promised you much booty that you will acquire, and He has hastened for you this victory."</p>
+                        <p class="text-right text-xs font-semibold text-amber-700 dark:text-amber-400 pt-1">— Surah Al-Fath 48:20</p>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </main>
-    <!-- Footer Section -->
-<footer class="max-w-4xl mx-auto px-4 py-8 mt-12 border-t border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        
-        <!-- Social Media Links -->
-        <div class="flex items-center space-x-5">
-            
-            <a href="https://t.me/TheHijabiCoder" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
-                <span>✈️</span> Telegram
-            </a>
-            <a href="https://www.linkedin.com/in/lakin-awel-7a41b0351" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
-                <span>💼</span> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/1akinua" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
-                <span>📸</span> Instagram
-            </a>
-        </div>
 
-        <!-- Quick Nav Links -->
-        <div class="flex items-center space-x-4">
-            <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Home</a>
-            <a href="miracles.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Miracles</a>
-            <a href="childhood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Early Life</a>
-            <a href="prophethood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition"> Prophethood</a>
-            <a href="companions.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Companions</a>
+    <!-- Footer Section -->
+    <footer class="max-w-4xl mx-auto px-4 py-8 mt-12 border-t border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <!-- Social Media Links -->
+            <div class="flex items-center space-x-5">
+                <a href="https://t.me/TheHijabiCoder" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                    <span>✈️</span> Telegram
+                </a>
+                <a href="https://www.linkedin.com/in/lakin-awel-7a41b0351" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/1akinua" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition font-medium">
+                    <span>📸</span> Instagram
+                </a>
+            </div>
+
+            <!-- Quick Nav Links -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Home</a>
+                <a href="miracles.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Miracles</a>
+                <a href="childhood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Early Life</a>
+                <a href="prophethood.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Prophethood</a>
+                <a href="companions.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Companions</a>
+                <a href="mawlid.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Mawlid Insights</a>
+            </div>
+            <!-- Copyright Text -->
+            <p class="flex items-center gap-1.5">
+                © 2026 Seerah Hub. Dedicated to preserving the noble legacy.
+            </p>
         </div>
-        <!-- Copyright Text -->
-        <p class="flex items-center gap-1.5">
-            © 2026 Seerah Hub. Dedicated to preserving the noble legacy.
-        </p>
-    </div>
-</footer>
+    </footer>
 
     <!-- Link the external JavaScript file -->
     <script src="script.js"></script>
